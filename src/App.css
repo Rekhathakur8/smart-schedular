@@ -1,38 +1,298 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+}
+/* main container maintaining all the componants */
+.mainContainer {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://media.istockphoto.com/id/1267700778/photo/birthday-cake-candles-with-candy-sprinkles-bottom-border-on-a-blue-background.webp?b=1&s=170667a&w=0&k=20&c=xx0j0qYM_USLcj_kyXVAQeSuj0JPLefWacMP5mNY0iA=");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* sub main container child of main condtainer */
+.subMainContainer {
+  background-color: #fbfcf8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  width: 50%;
+  margin: auto;
+  border-radius: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*this is the main heading of the to do app  */
+.mainHeading {
+  color: #035858;
+  font-family: "Open Sans 600", sans-serif;
+  font-size: 2rem;
+  margin: 5px;
+  margin-bottom: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* this is the discriptive text of heading */
+.discriptionText {
+  color: rgb(102, 102, 102);
+  font-family: "Open Sans 400", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* main input div at where main input and date input is present can edit there task */
+.mainInputBoxDiv {
+  width: 90%;
   display: flex;
   flex-direction: column;
+  box-shadow: 1px 1px 5px 2px rgb(226, 226, 226);
+}
+/* main input first div under which text input is lying */
+.TaskInputFirstDiv {
+  height: 3rem;
+  display: flex;
   align-items: center;
+}
+/* div containing the date input and an calender icon */
+.dateAndaddBtnInputDiv {
+  height: 3rem;
+  border-top: 0.1px solid rgb(219, 219, 219);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* input field type text  */
+#TaskInput {
+  width: 35%;
+  outline: none;
+  background: transparent;
+  border: none;
+  padding-left: 1rem;
+  color: rgb(70, 69, 69);
+  font-family: "Open Sans Medium 500", sans-serif;
+  font-size: 1.2rem;
+}
+
+#selectChoice {
+  height: 20px;
+  outline: none;
+}
+option {
+  height: 100px;
+}
+/* button for add the task */
+#AddButton {
+  width: 8rem;
+  background-color: #035858;
+  color: rgb(255, 255, 255);
+  font-family: "Open Sans 400", sans-serif;
+  height: 40px;
+  border: none;
+  border-radius: 0.2rem;
+  margin-right: 0.5rem;
+}
+
+/* date input field */
+#due_date_input {
+  width: 10px;
+  opacity: 0;
+}
+/* calender icon for input the date */
+.calender_icon {
+  position: absolute;
+  font-size: 2rem;
+}
+/* div containing the icon as well as date input field */
+.subDivOfclaenderIcon {
+  height: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  width: 8rem;
+}
+
+#ul-style {
+  width: 90%;
+  margin-top: 2rem;
+}
+
+.to-do-items-list-style {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5rem;
+  justify-content: center;
+  box-shadow: 1px 1px 5px 1px rgb(197, 195, 195);
+  margin-top: 10px;
+  font-family: "Open Sans 400", sans-serif;
+}
+
+.to-do-item-list-style-top-Div {
+  padding: 0.5rem;
+  display: flex;
+}
+.to-do-item-list-style-bottom-Div {
+  display: flex;
+  justify-content: flex-end;
+}
+#delete-Btn,
+.edit-button {
+  border: none;
+  font-size: 20px;
+  color: rgb(148, 146, 146);
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.edit-button {
+  color: rgb(15, 111, 255);
+}
+#delete-Btn:hover,
+.edit-button:hover {
+  color: #035858;
+}
+.edit-button-active {
+  border: none;
+  font-size: 20px;
+  color: rgb(148, 146, 146);
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.checkbox_input_box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #8d2626;
+}
+.checboxDiv {
+  margin-right: 5px;
+}
+
+#date-box-span {
+  margin-right: 1rem;
+}
+.mainTaskTextWithLine {
+  text-decoration: line-through;
+}
+
+.onEditDiv {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.editInputField {
+  width: 100%;
+  outline: none;
+  padding: 0.5rem;
+  border: none;
+}
+#editDateBtn {
+  padding: 0.2rem;
+  margin: 0.5rem;
+  margin-right: 10rem;
+  margin-top: 3rem;
+}
+
+.saveBtn {
+  width: 5rem;
+  height: 2rem;
+  border: 0.5rem;
+  background-color: #035858;
   color: white;
+  margin-right: 0.5rem;
+  margin-top: 3rem;
+}
+.cancleBtn {
+  width: 5rem;
+  height: 2rem;
+  border: 0.5rem;
+  background-color: #6d032c;
+  color: white;
+  margin-right: 0.5rem;
+  margin-top: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 800px) and (max-width: 959px) {
+  .subMainContainer {
+    background-color: #fbfcf8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    width: 70%;
+    margin: auto;
+    border-radius: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .subMainContainer {
+    background-color: #fbfcf8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    width: 90%;
+    border-radius: 1rem;
+  }
+}
+
+@media only screen and (min-width: 250px) and (max-width: 600px) {
+  .subMainContainer {
+    background-color: #fbfcf8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 0rem;
+  }
+
+  .mainContainer {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://media.istockphoto.com/id/1267700778/photo/birthday-cake-candles-with-candy-sprinkles-bottom-border-on-a-blue-background.webp?b=1&s=170667a&w=0&k=20&c=xx0j0qYM_USLcj_kyXVAQeSuj0JPLefWacMP5mNY0iA=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mainHeading {
+    color: #035858;
+    font-family: "Open Sans 600", sans-serif;
+    font-size: 2em;
+    margin: 5px;
+    margin-bottom: 3px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .mainContainer {
+    min-width: 100%;
+    height: 100vh;
+    background-image: none;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+  }
+  .subMainContainer {
+    background-color: #fbfcf8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 0rem;
   }
 }
